@@ -10,6 +10,7 @@ import com.designpatterns.builder.Car;
 import com.designpatterns.builder.CarBuilder;
 import com.designpatterns.builder.Director;
 import com.designpatterns.builder.ManualCar;
+import com.designpatterns.chainofresponsibility.Logger;
 import com.designpatterns.factory.Shape;
 import com.designpatterns.factory.ShapeFactory;
 import com.designpatterns.observer.*;
@@ -92,6 +93,21 @@ public class Client {
         Animal animal2 = factory.createFactory("WILD").createAnimal("LION");
         animal2.makeSound();
         animal2.eat();
+
+        System.out.println("******************************************************");
+
+        //Chain of Responsibility design pattern
+        Logger logger = new Logger();
+        logger.log("INFO", "This is Info msg");
+        logger.log("WARN", "This is Warning msg");
+        logger.log("DEBUG", "This is Debug msg");
+        logger.log("ERROR", "This is Error msg");
+
+
+
+
+
+
 
 
 
